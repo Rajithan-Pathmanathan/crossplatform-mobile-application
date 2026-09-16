@@ -1,6 +1,7 @@
 import { NavigatorScreenParams } from '@react-navigation/native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
+import { Booking } from '../types/booking';
 
 export type MainTabParamList = {
   Explore: undefined;
@@ -14,6 +15,7 @@ export type RootStackParamList = {
   MainTabs: NavigatorScreenParams<MainTabParamList> | undefined;
   EventDetails: { eventId: string };
   Booking: { eventId: string };
+  BookingConfirmation: { booking: Booking };
   CreateEditEvent: { eventId?: string };
   AttendeesList: { eventId: string; eventTitle: string };
 };

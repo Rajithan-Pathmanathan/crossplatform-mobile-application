@@ -5,6 +5,8 @@ import { useAuth } from '../context/AuthContext';
 import { RootStackParamList } from './types';
 import { MainTabNavigator } from './MainTabNavigator';
 import { EventDetailsScreen } from '../screens/explore/EventDetailsScreen';
+import { BookingScreen } from '../screens/booking/BookingScreen';
+import { BookingConfirmationScreen } from '../screens/booking/BookingConfirmationScreen';
 import { LoginScreen } from '../screens/auth/LoginScreen';
 import { RegisterScreen } from '../screens/auth/RegisterScreen';
 import { Colors } from '../constants/colors';
@@ -41,6 +43,22 @@ export const RootNavigator: React.FC = () => {
       <Stack.Screen
         name="EventDetails"
         component={EventDetailsScreen}
+        options={{
+          headerShown: false,
+          presentation: 'card',
+        }}
+      />
+      <Stack.Screen
+        name="Booking"
+        component={BookingScreen}
+        options={{
+          headerShown: false,
+          presentation: 'card',
+        }}
+      />
+      <Stack.Screen
+        name="BookingConfirmation"
+        component={BookingConfirmationScreen}
         options={{
           headerShown: false,
           presentation: 'card',

@@ -14,6 +14,7 @@ export const Colors = {
   text: '#0F172A',
   textSecondary: '#64748B',
   textMuted: '#94A3B8',
+  textTertiary: '#94A3B8',
   textInverse: '#FFFFFF',
 
   // Status & Feedback
@@ -34,4 +35,5 @@ export const Colors = {
   black: '#000000',
   white: '#FFFFFF',
   cardShadow: 'rgba(15, 23, 42, 0.08)',
+  overlay: 'rgba(15, 23, 42, 0.75)',
 };
