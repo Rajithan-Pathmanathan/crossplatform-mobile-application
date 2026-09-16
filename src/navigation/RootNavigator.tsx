@@ -7,6 +7,7 @@ import { MainTabNavigator } from './MainTabNavigator';
 import { EventDetailsScreen } from '../screens/explore/EventDetailsScreen';
 import { BookingScreen } from '../screens/booking/BookingScreen';
 import { BookingConfirmationScreen } from '../screens/booking/BookingConfirmationScreen';
+import { CreateEditEventScreen } from '../screens/organizer/CreateEditEventScreen';
 import { LoginScreen } from '../screens/auth/LoginScreen';
 import { RegisterScreen } from '../screens/auth/RegisterScreen';
 import { Colors } from '../constants/colors';
@@ -59,6 +60,14 @@ export const RootNavigator: React.FC = () => {
       <Stack.Screen
         name="BookingConfirmation"
         component={BookingConfirmationScreen}
+        options={{
+          headerShown: false,
+          presentation: 'card',
+        }}
+      />
+      <Stack.Screen
+        name="CreateEditEvent"
+        component={CreateEditEventScreen}
         options={{
           headerShown: false,
           presentation: 'card',

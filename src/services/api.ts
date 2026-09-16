@@ -163,7 +163,10 @@ class ApiService {
   }
 
   async createEvent(
-    eventData: Omit<Event, 'id' | 'createdAt' | 'availableSeats'>,
+    eventData: Omit<
+      Event,
+      'id' | 'createdAt' | 'availableSeats' | 'organizerId' | 'organizerName'
+    > & { address?: string },
     organizer: User
   ): Promise<Event> {
     await this.initializeDatabase();
@@ -171,6 +174,7 @@ class ApiService {
 
     const newEvent: Event = {
       ...eventData,
+      address: eventData.address || eventData.location,
       id: `evt_${Date.now()}`,
       organizerId: organizer.id,
       organizerName: organizer.name,
